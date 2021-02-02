@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <div class="container">
+        <p>This is a demo page.</p>
+    </div>
+
+    <script>
+        let a = [11, 18, 21];
+        let i=0;
+        //normal for loop
+        for(i=0;i<a.length;i++)
+            console.log(a[i]);
+
+        //foreach
+        a.forEach(function a(elements){
+            console.log("Element is: " + elements);
+        });
+
+        //for of
+        let b = [4, 24, 54];
+        for(elements of b)
+            console.log(elements);
+
+        // for in loop which is used in objects
+        let c = {
+            name: "Yola",
+            roll: 21,
+            batch: 2017,
+        }
+        for(elements in c)
+            console.log(`${elements} is ${c[elements]}`);
+
+        //while loop
+        let j=0
+        while(j<4){
+            console.log(j);
+            j++;
+        }
+
+        //do while loop
+        let k=5;
+        do{
+            console.log(k);
+            k++;
+        }while(k<4);
+    </script>
+</body>
+</html>

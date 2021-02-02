@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Objects</title>
+</head>
+<body>
+    <div id="demo-1"></div>
+    <br>
+    <div id="demo-2"></div>
+    <br>
+    <div id="demo-3"></div>
+    <br>
+    <div id="demo-4"></div>
+    <br>
+    <div id="demo-5"></div>
+    <br>
+    <div id="demo-6"></div>
+    <br>
+    <div id="demo-7"></div>
+    <br>
+    <script>
+        //Primitive types
+        let myVar = 34;
+        let myVar2 = "string";
+        let myVar3 = true;
+        let myVar4 = null;
+        let myVar5 = undefined;
+
+        //Array
+        let a = [1,2,3,4,5];
+        document.getElementById('demo-1').innerHTML = "This is simple array: " + a;
+        console.log(a);
+        
+        let b = [1, 2 , 3, 4, "yola"];
+        document.getElementById('demo-2').innerHTML = "This is array with multi data types: " + b;
+        console.log(b);
+        
+        let c = [21, 54, 18, 24, 11, "yola", "Yola", "yash", "Yash"];
+        document.getElementById('demo-3').innerHTML = "This is array with multi data types: " + c;
+        console.log(c);
+        
+        c.sort();
+        document.getElementById('demo-4').innerHTML = "This is sorted array with multi data types: " + c;
+        console.log(c);
+        
+        var d = ["21", "5", "48", "8"];
+        document.getElementById('demo-5').innerHTML = "This is array with numbers as strings: " + d;
+        
+        d.sort();
+        document.getElementById('demo-6').innerHTML = "This is sorted array with numbers as strings: " + d + " ";
+        
+        d.sort((a, b) => {
+            return a-b;
+        })
+        document.getElementById('demo-7').innerHTML = "This is proper sorted array with numbers as strings: " + d + " ";
+        
+        
+        
+        //Objects
+        let student = {
+            name: "Yola",
+            enrollment: 21,
+            batch: 2017,
+            "batch end": 2021,
+        }
+        console.log(student);
+    </script>
+</body>
+</html>

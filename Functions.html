@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Functions</title>
+    </head>
+    <body>
+        <script>
+            function hello(name){
+                console.log("Welcome " + name + "!");
+            }
+
+            function greet(name, greetings = "Have a nice day!"){
+                console.log(greetings + " " + name);
+            }
+
+            let var1 = "Yola";
+            let var2 = "Yash";
+            let var3 = "Tirth";
+
+            hello(var1);
+            hello(var2);
+            hello(var3);
+
+            let greet1 = "Have a great day!";
+            greet(var1, greet1);
+            greet(var2, greet1);
+            greet(var3);
+
+            let x = sum(5, 4);
+            console.log(x);
+
+            function sum(a, b){
+                let d = a + b;
+                return d;
+            }
+        </script>
+    </body>
+</html>

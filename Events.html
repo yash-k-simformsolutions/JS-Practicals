@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+
+    <style>
+        #btn{
+            background-color: coral;
+            border: 2px solid tomato;
+            color: whitesmoke;
+            padding: 10px 10px;
+            margin: 10px 100px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Yola Yash</h1>
+        <p id="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident tempore quas aperiam eveniet necessitatibus tempora dolore ipsam, consectetur libero animi fugiat officiis nobis enim architecto veniam sapiente laboriosam quaerat aliquam explicabo aliquid atque error esse voluptatibus soluta. Nam odit ratione, expedita, placeat laborum sint praesentium, esse ullam tempora laboriosam voluptatibus! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat perspiciatis porro ad sit vel voluptates ab quasi ex quibusdam saepe, inventore totam vitae quia ipsa optio animi, repellendus nihil temporibus?
+        </p>
+    </div>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+
+    <script>
+        let mover = document.getElementById('para');
+        mover.addEventListener('mouseover', function run(){
+            console.log("Mouse is over para.");
+        });
+
+        let mout = document.getElementById('para');
+        mout.addEventListener('mouseout', function run(){
+            console.log("Mouse is outside.");
+        });
+
+        function toggleHide(){
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('para');
+
+            if(para.style.display != 'none')
+                para.style.display = 'none';
+            else
+                para.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

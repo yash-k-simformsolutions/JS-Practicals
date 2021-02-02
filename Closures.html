@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Closures</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Closure.</h1>
+            <button id="btn" onclick="countdown()">Counter</button>
+            <p id="demo"></p>
+        </div>
+
+        <script>
+            // 1st example
+            var incrementCount = (function () {
+                var counter = 0;
+                return function count(){
+                    counter++;
+                    return counter;
+                }
+            })();
+
+            function countdown(){
+                document.getElementById('demo').innerHTML = incrementCount();
+            }
+
+            // 2nd example
+            function x(){
+                var a = 21;
+                function y(){
+                    console.log(a);
+                }
+                a = 54;
+                return y;
+            }
+            var b = x();
+            console.log(b);
+            b();
+
+        </script>
+    </body>
+</html>
